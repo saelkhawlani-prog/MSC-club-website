@@ -1,0 +1,16 @@
+        /* Custom CSS (Bootstrap handles most styling) */
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('/Assests/inpt-T.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+
+        .club-logo{
+            width: 50%;
+        }

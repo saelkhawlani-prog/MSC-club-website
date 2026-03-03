@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MCS CLUB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/CSSFiles/indexCSS.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm py-2" 
+     style="background: linear-gradient(to left, #00509D, #ffffff); border-bottom: 2px solid #00296B;">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/Assests/MSClogo.png" 
+                 alt="MSC Logo" 
+                 style="height: 75px; width: auto; mix-blend-mode: multiply; filter: contrast(110%);">
+            <span class="ms-2 fw-bold" style="color: #00296B; font-size: 1.25rem; letter-spacing: 1px;">
+                MATH & SCIENCE CLUB
+            </span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #00296B;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fs-6">
+                <li class="nav-item"><a class="nav-link fw-bold" style="color: #00296B;" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" style="color: #00296B;" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" style="color: #00296B;" href="#activities">Activities</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" style="color: #00296B;" href="#competitions">Competitions</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" style="color: #00296B;" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" style="color: #00296B;" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="home" class="hero d-flex align-items-center text-white" 
+         style="background: linear-gradient(rgba(0, 80, 157, 0.85), rgba(0, 41, 107, 0.85)), 
+                url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
+                background-size: cover; 
+                background-position: center; 
+                min-height: 85vh; 
+                padding-top: 80px;">
+    <div class="container text-center">
+        <h1 class="display-2 fw-bold mb-3">Master the <span style="color: #90E0EF;">Analytical</span> Edge</h1>
+        <p class="lead mb-4 fs-4 mx-auto" style="max-width: 800px;">
+            Where analytical rigor meets creative engineering—cultivating a community of scholars 
+            dedicated to pushing the boundaries of what is possible at INPT.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="joinUs.html" class="btn btn-light btn-lg px-5 fw-bold" style="color: #00509D;">Join the Club</a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 club-logo">
+                <img src="/Assests/MSClogo.png"
+                     class="img-fluid rounded " alt="Club Image">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold">About Our Club</h2>
+                <p>
+                    The Math & Science Club (MSC) is a student-led organization at the Institut National des Postes et Télécommunications (INPT) 
+                    in Morocco dedicated to fostering a deep appreciation for the analytical and empirical sciences. Originally established within 
+                    a community of future developers and engineers, the club has expanded its mission to empower students by bridging the gap between 
+                    theoretical academic concepts and practical, real-world applications in mathematics and various scientific disciplines. Through 
+                    a dynamic schedule of hands-on workshops, internal training sessions, and high-level competitions, the MSC provides a collaborative 
+                    environment where members can sharpen their problem-solving skills and engage in innovative research projects. Whether preparing for 
+                    national engineering challenges like ESPOIR 2026 or hosting intensive coding and logic sessions, the club serves as a premier hub for 
+                    intellectual growth and scientific excellence within the INPT community.
+                </p>
+                <p>
+                    We organize workshops, internal training sessions, and national coding competitions.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="activities" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5" style="color: #00296B;">Our Activities</h2>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm activity-card">
+                    <div class="image-mask-container">
+                        <img src="/Assests/chess-activity.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Chess">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h5 class="fw-bold mb-2" style="color: #00509D;">Chess & Competitions</h5>
+                        <p class="small mb-0 text-muted">Weekly chess sessions and local tournaments designed to sharpen strategic thinking and logical foresight.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm activity-card">
+                    <div class="image-mask-container">
+                        <img src="/Assests/math-session.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Math">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h5 class="fw-bold mb-2" style="color: #00509D;">Math Concept Sessions</h5>
+                        <p class="small mb-0 text-muted">In-depth explorations of advanced mathematical concepts, breaking down complex theories into intuitive knowledge.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm activity-card">
+                    <div class="image-mask-container">
+                        <img src="/Assests/research-activity.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Research">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h5 class="fw-bold mb-2" style="color: #00509D;">Research Activities</h5>
+                        <p class="small mb-0 text-muted">A dedicated space for scientific inquiry and research projects, investigating real-world problems with academic rigor.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .activity-card {
+        background-color: #ffffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+        /* This creates the longer rectangular look */
+        min-height: 480px; 
+    }
+
+    .activity-card:hover {
+        /* This makes the block move up slightly when hovered */
+        transform: translateY(-10px);
+        /* This makes the shadow stronger on hover */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    }
+
+    .image-mask-container {
+        height: 280px; /* Adjusted for the rectangular shape */
+        overflow: hidden; 
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%); 
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+</style>
+<section id="competitions" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5" style="color: #00296B;">Upcoming Competitions</h2>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <div class="card activity-card">
+                    <div class="image-mask-container">
+                        <img src="/Assests/integration-bee.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Integration Bee">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h5 class="fw-bold mb-2" style="color: #00509D;">Integration Bee</h5>
+                        <p class="small mb-0 text-muted">A high-speed calculus tournament where students race to solve complex integrals under pressure. Speed and precision are key.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card activity-card">
+                    <div class="image-mask-container">
+                        <img src="/Assests/cicada-challenge.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Cicada 3301">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h5 class="fw-bold mb-2" style="color: #00509D;">Cicada 3301</h5>
+                        <p class="small mb-0 text-muted">The ultimate mystery. Test your skills in cryptography, steganography, and advanced puzzle-solving in this legendary challenge.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card activity-card">
+                    <div class="image-mask-container">
+                        <img src="/Assests/tipe-mentoring.jpg" class="w-100 h-100" style="object-fit: cover;" alt="TIPE Mentoring">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h5 class="fw-bold mb-2" style="color: #00509D;">Mentoring TIPE</h5>
+                        <p class="small mb-0 text-muted">Support and guidance for your TIPE projects. We help you refine your scientific approach and prepare for national engineering milestones.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="team" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5" style="color: #00296B;">Meet Our Team</h2>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-3">
+                <div class="card activity-card">
+                    <div class="image-mask-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Leonhard_Euler.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Leonhard Euler">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h5 class="fw-bold mb-1" style="color: #00509D;">Leonhard Euler</h5>
+                        <p class="text-primary fw-semibold small mb-2">Club President</p>
+                        <p class="small text-muted mb-0">Overseeing the club's vision and mathematical excellence at INPT.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+    <div class="card activity-card">
+        <div class="image-mask-container">
+            <img src="/Assests/gauss.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Carl Friedrich Gauss">
+        </div>
+        <div class="p-4 text-start">
+            <h5 class="fw-bold mb-1" style="color: #00509D;">Carl Friedrich Gauss</h5>
+            <p class="text-primary fw-semibold small mb-2">Vice President</p>
+            <p class="small text-muted mb-0">Managing internal sessions and coordinating high-level research.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3">
+    <div class="card activity-card">
+        <div class="image-mask-container">
+            <img src="/Assests/Bobby_Fische.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Bobby Fischer">
+        </div>
+        <div class="p-4 text-start">
+            <h5 class="fw-bold mb-1" style="color: #00509D;">Bobby Fischer</h5>
+            <p class="text-primary fw-semibold small mb-2">Chess Cell Chef</p>
+            <p class="small text-muted mb-0">Leading strategy sessions and local chess competitions for members.</p>
+        </div>
+    </div>
+</div>
+
+            <div class="col-md-3">
+                <div class="card activity-card">
+                    <div class="image-mask-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Albert Einstein">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h5 class="fw-bold mb-1" style="color: #00509D;">Albert Einstein</h5>
+                        <p class="text-primary fw-semibold small mb-2">Research Cell Chef</p>
+                        <p class="small text-muted mb-0">Supervising the research cell and pushing scientific inquiry.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5" style="background: linear-gradient(to right, #ffffff, #E0F2FE);">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            
+            <div class="col-lg-5 text-start">
+                <h2 class="fw-bold display-5" style="color: #00296B;">Have a Question?</h2>
+                <p class="lead mb-4" style="color: #00509D;">
+                    Whether you want to learn more about our <strong>Math Sessions</strong>, 
+                    <strong>Chess Competitions</strong>, or <strong>Scientific Research</strong>, 
+                    drop us a message here.
+                </p>
+                
+                <div class="p-4 rounded-4 shadow-sm bg-white border-start border-4" style="border-color: #00509D !important;">
+                    <p class="fw-bold mb-1" style="color: #00296B;">Looking to join the club?</p>
+                    <p class="small text-muted mb-3">Membership applications are handled through a separate portal.</p>
+                    <a href="joinUs.html" class="btn btn-sm btn-outline-primary fw-bold">Official Registration Page</a>
+                </div>
+
+                <div class="mt-5">
+                    <p class="small fw-bold text-muted mb-3">CONNECT WITH US</p>
+                    <div class="d-flex gap-4">
+                        <a href="https://www.instagram.com/msc_inpt/"  target="_blank" class="fs-4" style="color: #E1306C;"><i class="bi bi-instagram"></i></a>
+                        <a href="mailto:msc@inpt.ac.ma" class="fs-4" style="color: #00509D;"><i class="bi bi-envelope-at"></i></a>
+                        <a href="https://linkedin.com/company/your_page" target="_blank" class="fs-4" style="color: #0077B5;"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-lg p-4 p-md-5" style="border-radius: 20px; background: #ffffff;">
+                    <form id="contactInquiryForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label fw-bold" style="color: #00509D;">Name</label>
+                                <input type="text" class="form-control form-control-lg border-2" placeholder="Full Name" style="border-color: #E0F2FE; border-radius: 10px;">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label fw-bold" style="color: #00509D;">Email</label>
+                                <input type="email" class="form-control form-control-lg border-2" placeholder="Email Address" style="border-color: #E0F2FE; border-radius: 10px;">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold" style="color: #00509D;">Subject</label>
+                            <input type="text" class="form-control form-control-lg border-2" placeholder="What is your question about?" style="border-color: #E0F2FE; border-radius: 10px;">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold" style="color: #00509D;">Message</label>
+                            <textarea class="form-control border-2" rows="5" placeholder="Your message..." style="border-color: #E0F2FE; border-radius: 10px;"></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-lg text-white fw-bold py-3 shadow-sm" style="background-color: #00509D; border-radius: 10px;">
+                                Send Inquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hover effects for the buttons */
+    #contact .btn-light:hover {
+        transform: translateY(-5px);
+        background-color: #f8f9fa;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important;
+    }
+    
+    #contact .btn-primary:hover {
+        transform: scale(1.05);
+        background-color: #00296B !important;
+    }
+</style>
+
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <p class="mb-0">© 2026 INPT Software Club | Follow us on 
+            <a href="#" class="text-white ms-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white ms-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white ms-2"><i class="bi bi-linkedin"></i></a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="/JSFiles/indexJS.js"></script>
+
+
+</body>
+</html>
