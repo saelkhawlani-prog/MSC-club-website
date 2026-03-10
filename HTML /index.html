@@ -8,9 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="/CSSFiles/indexCSS.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/JSFiles/indexJS.js"></script>
 
 </head>
 <body>
+
+<!-- SCROLL PROGRESS BAR -->
+<div id="scroll-progress-bar"></div>
+
 <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-2" 
      style="background: linear-gradient(to left, #00509D, #ffffff); border-bottom: 2px solid #00296B;">
     <div class="container">
@@ -23,6 +29,9 @@
             </span>
         </a>
         
+        <button id="darkModeToggle" title="Toggle dark mode" style="background:none;border:2px solid #00296B;border-radius:50%;width:38px;height:38px;cursor:pointer;margin-right:8px;font-size:1.1rem;display:flex;align-items:center;justify-content:center;color:#00296B;">
+            <i class="bi bi-moon-fill"></i>
+        </button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: #00296B;">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,13 +57,31 @@
                 min-height: 85vh; 
                 padding-top: 80px;">
     <div class="container text-center">
-        <h1 class="display-2 fw-bold mb-3">Master the <span style="color: #90E0EF;">Analytical</span> Edge</h1>
+        <h1 class="display-2 fw-bold mb-3">Master the <span id="typing-word" style="color: #90E0EF;">Analytical</span> Edge</h1>
         <p class="lead mb-4 fs-4 mx-auto" style="max-width: 800px;">
             Where analytical rigor meets creative engineering—cultivating a community of scholars 
             dedicated to pushing the boundaries of what is possible at INPT.
         </p>
         <div class="d-flex justify-content-center gap-3">
             <a href="joinUs.html" class="btn btn-light btn-lg px-5 fw-bold" style="color: #00509D;">Join the Club</a>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="counter" data-target="150">0</h2>
+                <p>Active Members</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="counter" data-target="12">0</h2>
+                <p>Annual Competitions</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="counter" data-target="45">0</h2>
+                <p>Research Projects</p>
+            </div>
         </div>
     </div>
 </section>
@@ -204,54 +231,86 @@
         <h2 class="fw-bold mb-5" style="color: #00296B;">Meet Our Team</h2>
         <div class="row g-4 justify-content-center">
 
+            <!-- FLIP CARD: Euler -->
             <div class="col-md-3">
-                <div class="card activity-card">
-                    <div class="image-mask-container">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Leonhard_Euler.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Leonhard Euler">
-                    </div>
-                    <div class="p-4 text-start">
-                        <h5 class="fw-bold mb-1" style="color: #00509D;">Leonhard Euler</h5>
-                        <p class="text-primary fw-semibold small mb-2">Club President</p>
-                        <p class="small text-muted mb-0">Overseeing the club's vision and mathematical excellence at INPT.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Leonhard_Euler.jpg" alt="Leonhard Euler">
+                            <div class="flip-front-info">
+                                <h5>Leonhard Euler</h5>
+                                <p>Club President</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="bi bi-person-circle flip-icon"></i>
+                            <h5>Leonhard Euler</h5>
+                            <p class="flip-role">Club President</p>
+                            <p class="flip-desc">Overseeing the club's vision and mathematical excellence at INPT.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- FLIP CARD: Gauss -->
             <div class="col-md-3">
-    <div class="card activity-card">
-        <div class="image-mask-container">
-            <img src="/Assests/gauss.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Carl Friedrich Gauss">
-        </div>
-        <div class="p-4 text-start">
-            <h5 class="fw-bold mb-1" style="color: #00509D;">Carl Friedrich Gauss</h5>
-            <p class="text-primary fw-semibold small mb-2">Vice President</p>
-            <p class="small text-muted mb-0">Managing internal sessions and coordinating high-level research.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-3">
-    <div class="card activity-card">
-        <div class="image-mask-container">
-            <img src="/Assests/Bobby_Fische.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Bobby Fischer">
-        </div>
-        <div class="p-4 text-start">
-            <h5 class="fw-bold mb-1" style="color: #00509D;">Bobby Fischer</h5>
-            <p class="text-primary fw-semibold small mb-2">Chess Cell Chef</p>
-            <p class="small text-muted mb-0">Leading strategy sessions and local chess competitions for members.</p>
-        </div>
-    </div>
-</div>
-
-            <div class="col-md-3">
-                <div class="card activity-card">
-                    <div class="image-mask-container">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Albert Einstein">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/Assests/gauss.jpg" alt="Carl Friedrich Gauss">
+                            <div class="flip-front-info">
+                                <h5>Carl Friedrich Gauss</h5>
+                                <p>Vice President</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="bi bi-person-circle flip-icon"></i>
+                            <h5>Carl Friedrich Gauss</h5>
+                            <p class="flip-role">Vice President</p>
+                            <p class="flip-desc">Managing internal sessions and coordinating high-level research.</p>
+                        </div>
                     </div>
-                    <div class="p-4 text-start">
-                        <h5 class="fw-bold mb-1" style="color: #00509D;">Albert Einstein</h5>
-                        <p class="text-primary fw-semibold small mb-2">Research Cell Chef</p>
-                        <p class="small text-muted mb-0">Supervising the research cell and pushing scientific inquiry.</p>
+                </div>
+            </div>
+
+            <!-- FLIP CARD: Fischer -->
+            <div class="col-md-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/Assests/Bobby_Fische.jpg" alt="Bobby Fischer">
+                            <div class="flip-front-info">
+                                <h5>Bobby Fischer</h5>
+                                <p>Chess Cell Chef</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="bi bi-person-circle flip-icon"></i>
+                            <h5>Bobby Fischer</h5>
+                            <p class="flip-role">Chess Cell Chef</p>
+                            <p class="flip-desc">Leading strategy sessions and local chess competitions for members.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FLIP CARD: Einstein -->
+            <div class="col-md-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Albert Einstein">
+                            <div class="flip-front-info">
+                                <h5>Albert Einstein</h5>
+                                <p>Research Cell Chef</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="bi bi-person-circle flip-icon"></i>
+                            <h5>Albert Einstein</h5>
+                            <p class="flip-role">Research Cell Chef</p>
+                            <p class="flip-desc">Supervising the research cell and pushing scientific inquiry.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -282,7 +341,7 @@
                     <p class="small fw-bold text-muted mb-3">CONNECT WITH US</p>
                     <div class="d-flex gap-4">
                         <a href="https://www.instagram.com/msc_inpt/"  target="_blank" class="fs-4" style="color: #E1306C;"><i class="bi bi-instagram"></i></a>
-                        <a href="mailto:msc@inpt.ac.ma" class="fs-4" style="color: #00509D;"><i class="bi bi-envelope-at"></i></a>
+                        <a href="/cdn-cgi/l/email-protection#81ecf2e2c1e8eff1f5afe0e2afece0" class="fs-4" style="color: #00509D;"><i class="bi bi-envelope-at"></i></a>
                         <a href="https://linkedin.com/company/your_page" target="_blank" class="fs-4" style="color: #0077B5;"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
@@ -323,7 +382,7 @@
 </section>
 
 <style>
-    /* Hover effects for the buttons */
+
     #contact .btn-light:hover {
         transform: translateY(-5px);
         background-color: #f8f9fa;
@@ -338,7 +397,7 @@
 
 <footer class="bg-dark text-white text-center py-3">
     <div class="container">
-        <p class="mb-0">© 2026 MCS CLUB | Follow us on 
+        <p class="mb-0">© 2026 MSC club| Follow us on 
             <a href="#" class="text-white ms-2"><i class="bi bi-facebook"></i></a>
             <a href="#" class="text-white ms-2"><i class="bi bi-instagram"></i></a>
             <a href="#" class="text-white ms-2"><i class="bi bi-linkedin"></i></a>
@@ -346,11 +405,683 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" title="Back to top">
+    <i class="bi bi-arrow-up"></i>
+</button>
 
-<script src="/JSFiles/indexJS.js"></script>
+<!-- TOAST NOTIFICATION -->
+<div id="msc-toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="msc-toast-body">
+        <i class="bi bi-check-circle-fill me-2" style="color:#198754;"></i>
+        <span id="msc-toast-msg">Message sent successfully!</span>
+    </div>
+</div>
+
+<style>
+    /* Back-to-top button */
+    #backToTop {
+        display: none;
+        position: fixed;
+        bottom: 36px;
+        right: 36px;
+        z-index: 9999;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: #00509D;
+        color: #fff;
+        border: none;
+        font-size: 1.3rem;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: background-color 0.2s, transform 0.2s, opacity 0.3s;
+        opacity: 0;
+    }
+    #backToTop.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+    }
+    #backToTop:hover {
+        background-color: #00296B;
+        transform: translateY(-3px);
+    }
+
+    /* Toast */
+    #msc-toast {
+        position: fixed;
+        bottom: 96px;
+        right: 36px;
+        z-index: 9999;
+        background: #fff;
+        border-left: 4px solid #198754;
+        border-radius: 10px;
+        padding: 14px 20px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+        font-weight: 600;
+        color: #00296B;
+        display: none;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.35s ease, transform 0.35s ease;
+        min-width: 240px;
+    }
+    #msc-toast.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    #msc-toast-body {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Typing cursor */
+    #typing-word::after {
+        content: '|';
+        animation: blink 0.7s step-end infinite;
+        margin-left: 2px;
+        color: #90E0EF;
+    }
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0; }
+    }
+
+    /* Active nav link */
+    .navbar-nav .nav-link.active-section {
+        color: #00509D !important;
+        border-bottom: 2px solid #00509D;
+        padding-bottom: 2px;
+    }
+</style>
+
+<style>
+    /* ── SCROLL PROGRESS BAR ── */
+    #scroll-progress-bar {
+        position: fixed;
+        top: 0; left: 0;
+        height: 4px;
+        width: 0%;
+        background: linear-gradient(to right, #00509D, #90E0EF);
+        z-index: 99999;
+        transition: width 0.1s linear;
+    }
+
+    /* ── FLIP CARDS ── */
+    .flip-card {
+        perspective: 1000px;
+        height: 380px;
+    }
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.7s cubic-bezier(.4,0,.2,1);
+        transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner,
+    .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%; height: 100%;
+        backface-visibility: hidden;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+    .flip-card-front {
+        background: #fff;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    }
+    .flip-card-front img {
+        width: 100%; height: 260px;
+        object-fit: cover;
+        display: block;
+        mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    }
+    .flip-front-info {
+        padding: 14px 16px 10px;
+        text-align: left;
+    }
+    .flip-front-info h5 { color: #00509D; font-weight: 700; margin-bottom: 2px; font-size: .97rem; }
+    .flip-front-info p  { color: #0077B5; font-size: .82rem; font-weight: 600; margin: 0; }
+    .flip-card-back {
+        background: linear-gradient(135deg, #00296B, #00509D);
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 22px;
+        color: #fff;
+        text-align: center;
+    }
+    .flip-icon { font-size: 3rem; margin-bottom: 14px; color: #90E0EF; }
+    .flip-card-back h5 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+    .flip-role { color: #90E0EF; font-weight: 600; font-size: .85rem; margin-bottom: 12px; }
+    .flip-desc { font-size: .85rem; opacity: .9; line-height: 1.5; }
+
+    /* ── DARK MODE ── */
+    body.dark-mode {
+        background-color: #121212 !important;
+        color: #e0e0e0 !important;
+    }
+    body.dark-mode nav.navbar {
+        background: linear-gradient(to left, #1a1a2e, #16213e) !important;
+        border-bottom-color: #00509D !important;
+    }
+    body.dark-mode .navbar-brand span,
+    body.dark-mode .nav-link { color: #90E0EF !important; }
+    body.dark-mode section { background-color: #1a1a2e !important; }
+    body.dark-mode .bg-light { background-color: #16213e !important; }
+    body.dark-mode .bg-dark  { background-color: #0d0d0d !important; }
+    body.dark-mode .card,
+    body.dark-mode .flip-card-front { background-color: #1e1e2e !important; color: #e0e0e0 !important; }
+    body.dark-mode .text-muted { color: #aaa !important; }
+    body.dark-mode h2, body.dark-mode h5 { color: #90E0EF !important; }
+    body.dark-mode footer { background-color: #0d0d0d !important; }
+    body.dark-mode #darkModeToggle { border-color: #90E0EF !important; color: #90E0EF !important; }
+    body.dark-mode .form-control { background: #1e1e2e; color: #e0e0e0; border-color: #00509D !important; }
+    body.dark-mode .card.border-0.shadow-lg { background: #1e1e2e !important; }
+
+    /* ── STICKY SECTION LABELS ── */
+    .sticky-section-label {
+        position: sticky;
+        top: 70px;
+        z-index: 100;
+        display: inline-block;
+        background: linear-gradient(90deg, #00509D, #00296B);
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 4px 14px;
+        border-radius: 0 0 8px 8px;
+        margin-bottom: -10px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .sticky-section-label.visible { opacity: 1; }
+</style>
+
+<script>
+$(document).ready(function () {
+
+    /* ============================================================
+       1. SMOOTH SCROLL — nav links glide to sections
+    ============================================================ */
+    $('a.nav-link[href^="#"]').on('click', function (e) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top - 70   // offset for fixed navbar
+            }, 700, 'swing');
+
+            // Close mobile navbar after click
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
 
 
-</body>
-</html>
+    /* ============================================================
+       2. ANIMATED COUNTER — numbers count up when scrolled into view
+    ============================================================ */
+    var countersStarted = false;
 
+    function startCounters() {
+        $('.counter').each(function () {
+            var $el     = $(this);
+            var target  = parseInt($el.data('target'));
+            var duration = 1800;          // ms
+            var stepTime = 20;            // ms per tick
+            var steps    = duration / stepTime;
+            var increment = target / steps;
+            var current  = 0;
+
+            var timer = setInterval(function () {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                $el.text(Math.floor(current) + '+');
+            }, stepTime);
+        });
+    }
+
+    $(window).on('scroll', function () {
+        if (countersStarted) return;
+        var counterSection = $('.counter').first().closest('section');
+        if (counterSection.length) {
+            var sectionTop = counterSection.offset().top;
+            var viewBottom = $(window).scrollTop() + $(window).height();
+            if (viewBottom > sectionTop + 50) {
+                countersStarted = true;
+                startCounters();
+            }
+        }
+    });
+
+
+    /* ============================================================
+       3. SCROLL-TRIGGERED FADE-IN ANIMATIONS
+    ============================================================ */
+    // Add the fade-in class to elements we want animated
+    $('section').each(function () {
+        $(this).find('.card, .col-md-6, h2, .lead').addClass('fade-in-el');
+    });
+
+    // Inject the CSS for the animation
+    $('<style>')
+        .prop('type', 'text/css')
+        .html(`
+            .fade-in-el {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 0.65s ease, transform 0.65s ease;
+            }
+            .fade-in-el.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        `)
+        .appendTo('head');
+
+    function revealOnScroll() {
+        var windowBottom = $(window).scrollTop() + $(window).height();
+        $('.fade-in-el:not(.visible)').each(function () {
+            if ($(this).offset().top < windowBottom - 60) {
+                $(this).addClass('visible');
+            }
+        });
+    }
+
+    $(window).on('scroll', revealOnScroll);
+    revealOnScroll(); // run once on load for elements already in view
+
+
+    /* ============================================================
+       4. CONTACT FORM VALIDATION
+    ============================================================ */
+    $('#contactInquiryForm').on('submit', function (e) {
+        e.preventDefault();
+        clearErrors();
+
+        var $inputs  = $(this).find('input, textarea');
+        var $name    = $inputs.filter('[placeholder="Full Name"]');
+        var $email   = $inputs.filter('[placeholder="Email Address"]');
+        var $subject = $inputs.filter('[placeholder="What is your question about?"]');
+        var $message = $(this).find('textarea');
+        var valid    = true;
+
+        // Name
+        if ($.trim($name.val()) === '') {
+            showError($name, 'Please enter your full name.');
+            valid = false;
+        }
+
+        // Email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if ($.trim($email.val()) === '') {
+            showError($email, 'Please enter your email address.');
+            valid = false;
+        } else if (!emailRegex.test($email.val())) {
+            showError($email, 'Please enter a valid email address.');
+            valid = false;
+        }
+
+        // Subject
+        if ($.trim($subject.val()) === '') {
+            showError($subject, 'Please enter a subject.');
+            valid = false;
+        }
+
+        // Message
+        if ($.trim($message.val()) === '') {
+            showError($message, 'Please write your message.');
+            valid = false;
+        }
+
+        if (valid) {
+            // Show success feedback
+            var $btn = $(this).find('button[type="submit"]');
+            $btn.html('<i class="bi bi-check-circle me-2"></i>Message Sent!')
+                .css('background-color', '#198754')
+                .prop('disabled', true);
+
+            setTimeout(function () {
+                $btn.html('Send Inquiry')
+                    .css('background-color', '#00509D')
+                    .prop('disabled', false);
+                $('#contactInquiryForm')[0].reset();
+            }, 3000);
+        }
+    });
+
+    // Real-time: remove error when user starts typing
+    $('#contactInquiryForm').on('input', 'input, textarea', function () {
+        $(this).removeClass('is-invalid');
+        $(this).next('.invalid-feedback').remove();
+    });
+
+    function showError($el, msg) {
+        $el.addClass('is-invalid');
+        if ($el.next('.invalid-feedback').length === 0) {
+            $('<div class="invalid-feedback">' + msg + '</div>').insertAfter($el);
+        }
+    }
+
+    function clearErrors() {
+        $('#contactInquiryForm input, #contactInquiryForm textarea').removeClass('is-invalid');
+        $('#contactInquiryForm .invalid-feedback').remove();
+    }
+
+
+    /* ============================================================
+       5. ACTIVE NAV LINK HIGHLIGHT ON SCROLL
+    ============================================================ */
+    var sections = $('section[id]');
+
+    function updateActiveNav() {
+        var scrollY = $(window).scrollTop() + 90;
+        sections.each(function () {
+            var top    = $(this).offset().top;
+            var bottom = top + $(this).outerHeight();
+            var id     = $(this).attr('id');
+            if (scrollY >= top && scrollY < bottom) {
+                $('.navbar-nav .nav-link').removeClass('active-section');
+                $('.navbar-nav .nav-link[href="#' + id + '"]').addClass('active-section');
+            }
+        });
+    }
+
+    $(window).on('scroll', updateActiveNav);
+    updateActiveNav();
+
+
+    /* ============================================================
+       6. BACK-TO-TOP BUTTON
+    ============================================================ */
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 400) {
+            $('#backToTop').addClass('show');
+        } else {
+            $('#backToTop').removeClass('show');
+        }
+    });
+
+    $('#backToTop').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 600, 'swing');
+    });
+
+
+    /* ============================================================
+       7. NAVBAR HIDE / SHOW ON SCROLL DIRECTION
+    ============================================================ */
+    var lastScrollTop = 0;
+    var navbarHeight  = $('nav.navbar').outerHeight();
+
+    $(window).on('scroll', function () {
+        var current = $(this).scrollTop();
+        if (current > lastScrollTop && current > navbarHeight * 2) {
+            // Scrolling DOWN — hide navbar
+            $('nav.navbar').css({
+                transform : 'translateY(-100%)',
+                transition: 'transform 0.35s ease'
+            });
+        } else {
+            // Scrolling UP — show navbar
+            $('nav.navbar').css({
+                transform : 'translateY(0)',
+                transition: 'transform 0.35s ease'
+            });
+        }
+        lastScrollTop = current <= 0 ? 0 : current;
+    });
+
+
+    /* ============================================================
+       8. TYPING ANIMATION IN HERO TEXT
+    ============================================================ */
+    var words   = ['Analytical', 'Mathematical', 'Scientific', 'Engineering', 'Logical'];
+    var wIndex  = 0;
+    var cIndex  = 0;
+    var deleting = false;
+    var $typingEl = $('#typing-word');
+
+    function type() {
+        var word    = words[wIndex];
+        var display = deleting ? word.substring(0, cIndex--) : word.substring(0, cIndex++);
+
+        $typingEl.text(display);
+
+        var speed = deleting ? 60 : 110;
+
+        if (!deleting && cIndex === word.length + 1) {
+            speed = 1800;   // pause before deleting
+            deleting = true;
+        } else if (deleting && cIndex === 0) {
+            deleting = false;
+            wIndex = (wIndex + 1) % words.length;
+            speed = 400;    // pause before typing next word
+        }
+
+        setTimeout(type, speed);
+    }
+
+    type();
+
+
+    /* ============================================================
+       9. TOAST NOTIFICATION ON FORM SUBMIT (replaces button-only feedback)
+    ============================================================ */
+    function showToast(msg) {
+        $('#msc-toast-msg').text(msg);
+        var $toast = $('#msc-toast');
+        $toast.addClass('show');
+        setTimeout(function () {
+            $toast.removeClass('show');
+            setTimeout(function () { $toast.hide(); }, 350);
+        }, 3500);
+    }
+
+    // Hook into existing form validation — fire toast on valid submit
+    $('#contactInquiryForm').off('submit').on('submit', function (e) {
+        e.preventDefault();
+        clearErrors();
+
+        var $inputs  = $(this).find('input, textarea');
+        var $name    = $inputs.filter('[placeholder="Full Name"]');
+        var $email   = $inputs.filter('[placeholder="Email Address"]');
+        var $subject = $inputs.filter('[placeholder="What is your question about?"]');
+        var $message = $(this).find('textarea');
+        var valid    = true;
+
+        if ($.trim($name.val()) === '') {
+            showError($name, 'Please enter your full name.');
+            valid = false;
+        }
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if ($.trim($email.val()) === '') {
+            showError($email, 'Please enter your email address.');
+            valid = false;
+        } else if (!emailRegex.test($email.val())) {
+            showError($email, 'Please enter a valid email address.');
+            valid = false;
+        }
+
+        if ($.trim($subject.val()) === '') {
+            showError($subject, 'Please enter a subject.');
+            valid = false;
+        }
+
+        if ($.trim($message.val()) === '') {
+            showError($message, 'Please write your message.');
+            valid = false;
+        }
+
+        if (valid) {
+            var $btn = $(this).find('button[type="submit"]');
+            $btn.html('<i class="bi bi-check-circle me-2"></i>Sending...')
+                .css('background-color', '#198754')
+                .prop('disabled', true);
+
+            setTimeout(function () {
+                $btn.html('Send Inquiry')
+                    .css('background-color', '#00509D')
+                    .prop('disabled', false);
+                $('#contactInquiryForm')[0].reset();
+                showToast('✅ Your message was sent successfully!');
+            }, 800);
+        }
+    });
+
+
+    /* ============================================================
+       10. SCROLL PROGRESS BAR
+    ============================================================ */
+    $(window).on('scroll.progress', function () {
+        var scrollTop = $(this).scrollTop();
+        var docHeight = $(document).height() - $(window).height();
+        var progress  = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        $('#scroll-progress-bar').css('width', progress + '%');
+    });
+
+
+    /* ============================================================
+       11. DARK MODE TOGGLE
+    ============================================================ */
+    if (localStorage.getItem('msc-dark') === '1') {
+        $('body').addClass('dark-mode');
+        $('#darkModeToggle i').removeClass('bi-moon-fill').addClass('bi-sun-fill');
+    }
+
+    $('#darkModeToggle').on('click', function () {
+        $('body').toggleClass('dark-mode');
+        var isDark = $('body').hasClass('dark-mode');
+        $(this).find('i')
+            .toggleClass('bi-moon-fill', !isDark)
+            .toggleClass('bi-sun-fill',  isDark);
+        localStorage.setItem('msc-dark', isDark ? '1' : '0');
+    });
+
+
+    /* ============================================================
+       12. CARD FLIP — click/touch support for mobile
+    ============================================================ */
+    $('.flip-card').on('click', function () {
+        $(this).toggleClass('flipped');
+    });
+
+
+    /* ============================================================
+       13. STICKY SECTION HEADERS
+    ============================================================ */
+    var sectionLabels = {
+        'home': 'Home', 'about': 'About', 'activities': 'Activities',
+        'competitions': 'Competitions', 'team': 'Team', 'contact': 'Contact'
+    };
+
+    $('section[id]').each(function () {
+        var id = $(this).attr('id');
+        if (sectionLabels[id]) {
+            $(this).prepend('<div class="sticky-section-label">' + sectionLabels[id] + '</div>');
+        }
+    });
+
+    function updateStickyLabels() {
+        var scrollY = $(window).scrollTop() + 75;
+        $('section[id]').each(function () {
+            var top    = $(this).offset().top;
+            var bottom = top + $(this).outerHeight();
+            var $label = $(this).find('.sticky-section-label');
+            if (scrollY >= top && scrollY < bottom) $label.addClass('visible');
+            else $label.removeClass('visible');
+        });
+    }
+    $(window).on('scroll', updateStickyLabels);
+    updateStickyLabels();
+
+
+    /* ============================================================
+       14. CONFETTI ANIMATION ON FORM SUBMIT
+    ============================================================ */
+    function launchConfetti() {
+        var colors = ['#00509D', '#90E0EF', '#00296B', '#ffffff', '#FFD700', '#198754'];
+        var $container = $('<div>').css({
+            position: 'fixed', top: 0, left: 0,
+            width: '100%', height: '100%',
+            pointerEvents: 'none', zIndex: 99998, overflow: 'hidden'
+        });
+        $('body').append($container);
+
+        for (var i = 0; i < 120; i++) {
+            (function () {
+                var size   = Math.random() * 10 + 6;
+                var color  = colors[Math.floor(Math.random() * colors.length)];
+                var left   = Math.random() * 100;
+                var delay  = Math.random() * 600;
+                var shape  = Math.random() > 0.5 ? '50%' : '2px';
+                var $piece = $('<div>').css({
+                    position: 'absolute', top: '-20px',
+                    left: left + '%', width: size + 'px', height: size + 'px',
+                    backgroundColor: color, borderRadius: shape, opacity: 1
+                });
+                $container.append($piece);
+                $piece.delay(delay).animate({
+                    top: (60 + Math.random() * 35) + 'vh',
+                    left: (left + (Math.random() * 20 - 10)) + '%',
+                    opacity: 0
+                }, { duration: 1800 + Math.random() * 900, easing: 'swing',
+                     complete: function () { $(this).remove(); } });
+            })();
+        }
+        setTimeout(function () { $container.remove(); }, 3500);
+    }
+
+    // Re-bind form to include confetti
+    $('#contactInquiryForm').off('submit').on('submit', function (e) {
+        e.preventDefault();
+        clearErrors();
+
+        var $inputs  = $(this).find('input, textarea');
+        var $name    = $inputs.filter('[placeholder="Full Name"]');
+        var $email   = $inputs.filter('[placeholder="Email Address"]');
+        var $subject = $inputs.filter('[placeholder="What is your question about?"]');
+        var $message = $(this).find('textarea');
+        var valid    = true;
+
+        if ($.trim($name.val()) === '') { showError($name, 'Please enter your full name.'); valid = false; }
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if ($.trim($email.val()) === '') { showError($email, 'Please enter your email address.'); valid = false; }
+        else if (!emailRegex.test($email.val())) { showError($email, 'Please enter a valid email address.'); valid = false; }
+        if ($.trim($subject.val()) === '') { showError($subject, 'Please enter a subject.'); valid = false; }
+        if ($.trim($message.val()) === '') { showError($message, 'Please write your message.'); valid = false; }
+
+        if (valid) {
+            var $btn = $(this).find('button[type="submit"]');
+            $btn.html('<i class="bi bi-check-circle me-2"></i>Sending...')
+                .css('background-color', '#198754').prop('disabled', true);
+            launchConfetti();
+            setTimeout(function () {
+                $btn.html('Send Inquiry').css('background-color', '#00509D').prop('disabled', false);
+                $('#contactInquiryForm')[0].reset();
+                showToast('✅ Your message was sent successfully!');
+            }, 800);
+        }
+    });
+
+});
+</script>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn
